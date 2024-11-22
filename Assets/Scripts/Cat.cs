@@ -35,7 +35,8 @@ public class Cat : MonoBehaviour
 
     private void moveForwardOrBack(Vector3 moveDirection)
     {
-        Vector3 fbMoveDirection = new Vector3(0, 0, moveDirection.z);
+        // Vector3 fbMoveDirection = new Vector3(0, 0, moveDirection.z);
+        Vector3 fbMoveDirection = transform.forward * moveDirection.z;
         transform.position += fbMoveDirection * (moveSpeed * Time.deltaTime);
     }
 

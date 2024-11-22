@@ -17,12 +17,6 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Attack.performed += PlayerAttacked;
     }
 
-    // TODO: let's denormalize this one so we can better handle it later...
-    public Vector3 GetMovementVectorNormalized()
-    {
-        return playerInputActions.Player.Move.ReadValue<Vector3>();
-    }
-
     public Vector2 GetMousePan()
     {
         Vector2 mouseDelta = playerInputActions.Player.Look.ReadValue<Vector2>();

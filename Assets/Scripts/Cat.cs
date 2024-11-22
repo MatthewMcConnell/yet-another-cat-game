@@ -22,12 +22,19 @@ public class Cat : MonoBehaviour
         Vector3 moveDirection = gameInput.GetMovementVectorNormalized();
         moveForwardOrBack(moveDirection);
         rotate(gameInput.GetMousePan());
+        ensureZRotationIsZero();
     }
 
     private void FixedUpdate()
     {
         Vector3 moveDirection = gameInput.GetMovementVectorNormalized();
         tryJump(moveDirection);
+    }
+    
+    private void ensureZRotationIsZero()
+    {
+        Vector3 currentRotation = transform.rotation.eulerAngles;
+        transform.rotation = Quaternion.Euler(currentRotation.x, currentRotation.y, 0);
     }
     
     private void rotate(Vector2 pan)

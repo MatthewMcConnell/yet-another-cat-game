@@ -16,7 +16,7 @@ public class Cat : MonoBehaviour
 
     private void Start()
     {
-        gameInput.addAttackListener(OnAttack);
+        gameInput.AddAttackListener(OnAttack);
     }
 
     private void OnAttack(object sender, EventArgs e)

@@ -9,12 +9,14 @@ public class GameInput : MonoBehaviour
 {
     private PlayerInputActions playerInputActions;
     private event EventHandler OnPlayerAttack;
+    private event EventHandler OnEnterPressed;
     
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
         playerInputActions.Player.Attack.performed += PlayerAttacked;
+        playerInputActions.Player.Skip.performed += EnterPressed;
     }
 
     public Vector2 GetMousePan()
@@ -28,8 +30,18 @@ public class GameInput : MonoBehaviour
         OnPlayerAttack?.Invoke(this, EventArgs.Empty);
     }
 
-    public void addAttackListener(EventHandler listener)
+    private void EnterPressed(InputAction.CallbackContext context)
+    {
+        OnEnterPressed?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void AddAttackListener(EventHandler listener)
     {
         OnPlayerAttack += listener;
+    }
+    
+    public void AddEnterPressedListener(EventHandler listener)
+    {
+        OnEnterPressed += listener;
     }
 }

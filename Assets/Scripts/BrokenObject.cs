@@ -8,12 +8,13 @@ public class BrokenObject : MonoBehaviour
     [SerializeField]
     private GameObject _shatteredObject;
 
-
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag.Equals("Floor"))
         {
-            Instantiate(_shatteredObject, transform.position, transform.rotation);
+            GameObject shattered = Instantiate(_shatteredObject, transform.position, transform.rotation);
+
+            shattered.GetComponent<AudioSource>().Play();
 
             Destroy(gameObject);
         }

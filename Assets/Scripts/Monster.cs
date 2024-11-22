@@ -7,5 +7,7 @@ public class Monster : MonoBehaviour
     public void OnAttack()
     {
         Debug.Log("Monster Attacked!");
+        Debug.Log("Destroying Monster " + gameObject.name);
+        Destroy(gameObject);
     }
 }

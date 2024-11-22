@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class EnterPromptUI : MonoBehaviour
+public class EnterPrompt : MonoBehaviour
 {
     private const string TEXT_PREFIX = "Press Enter to "; 
     private const string PREGAME_POSTFIX = "Start the Game";
@@ -12,7 +12,7 @@ public class EnterPromptUI : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI text;
     
-    void Start()
+    private void Start()
     {
         text.text = TEXT_PREFIX + PREGAME_POSTFIX;
         FullGameManager.Instance.OnStateChange += OnStateChange;

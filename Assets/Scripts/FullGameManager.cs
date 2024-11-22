@@ -6,11 +6,16 @@ using UnityEngine;
 public class FullGameManager : MonoBehaviour
 {
     [SerializeField] private GameInput gameInput;
+    [SerializeField] private float countdownDurationInSeconds;
+    [SerializeField] private float gameDurationInSeconds;
 
     public static FullGameManager Instance { get; private set; }
     public GameState gameState { get; private set; }
-    
+    public bool hasPlayerWon { get; private set; }
     public event EventHandler OnStateChange;
+    
+    private float countdownTimer;
+    private float gameTimer;
 
     private void Awake()
     {
@@ -44,12 +49,55 @@ public class FullGameManager : MonoBehaviour
         switch (gameState)
         {
             case GameState.COUNTDOWN:
-                // When the countdown is finished, we go into the running state
+                processCountdown();
                 break;
             case GameState.RUNNING:
-                // When the game is finished, we go into the finished state
+                processRunning();
                 break;
         }
+    }
+
+    private void processRunning()
+    {
+        gameTimer -= Time.deltaTime;
+        if (gameTimer <= 0)
+        {
+            hasPlayerWon = false;
+            goToFinished();
+        }
+        
+        if (AllMonstersAreDead())
+        {
+            hasPlayerWon = true;
+            goToFinished();
+        }
+    }
+
+    private bool AllMonstersAreDead()
+    {
+        return false;
+    }
+
+    private void goToFinished()
+    {
+        gameState = GameState.FINISHED;
+        fireStateChangeEvent();
+    }
+
+    private void processCountdown()
+    {
+        countdownTimer -= Time.deltaTime;
+        if (countdownTimer <= 0)
+        {
+            goToRunning();
+        }
+    }
+
+    private void goToRunning()
+    {
+        gameTimer = gameDurationInSeconds;
+        gameState = GameState.RUNNING;
+        fireStateChangeEvent();
     }
 
     private void goToIntro()
@@ -60,6 +108,7 @@ public class FullGameManager : MonoBehaviour
     
     private void goToCountdown()
     {
+        countdownTimer = countdownDurationInSeconds;
         gameState = GameState.COUNTDOWN;
         fireStateChangeEvent();
     }
@@ -74,5 +123,10 @@ public class FullGameManager : MonoBehaviour
     {
         Debug.Log("Game State is now: " + gameState);
         OnStateChange?.Invoke(this, EventArgs.Empty);
+    }
+    
+    public int GetCountdownTime()
+    {
+        return Mathf.CeilToInt(countdownTimer);
     }
 }

@@ -17,7 +17,8 @@ public class Cat : MonoBehaviour
     private void Update()
     {
         Vector3 moveDirection = gameInput.GetMovementVectorNormalized();
-        moveXZ(moveDirection);
+        moveForwardOrBack(moveDirection);
+        rotate(gameInput.GetMousePan());
     }
 
     private void FixedUpdate()
@@ -25,11 +26,17 @@ public class Cat : MonoBehaviour
         Vector3 moveDirection = gameInput.GetMovementVectorNormalized();
         tryJump(moveDirection);
     }
-
-    private void moveXZ(Vector3 moveDirection)
+    
+    private void rotate(float pan)
     {
-        Vector3 xzMoveDirection = new Vector3(moveDirection.x, 0, moveDirection.z);
-        transform.position += xzMoveDirection * (moveSpeed * Time.deltaTime);
+        Vector3 rotation = new Vector3(0, pan, 0);
+        transform.Rotate(rotation);
+    }
+
+    private void moveForwardOrBack(Vector3 moveDirection)
+    {
+        Vector3 fbMoveDirection = new Vector3(0, 0, moveDirection.z);
+        transform.position += fbMoveDirection * (moveSpeed * Time.deltaTime);
     }
 
     private void tryJump(Vector3 moveDirection)

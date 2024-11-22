@@ -13,6 +13,7 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Enable();
     }
 
+    // TODO: let's denormalize this one so we can better handle it later...
     public Vector3 GetMovementVectorNormalized()
     {
         return playerInputActions.Player.Move.ReadValue<Vector3>();

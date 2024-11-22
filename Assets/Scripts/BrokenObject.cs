@@ -11,7 +11,7 @@ public class BrokenObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Floor")
+        if(collision.gameObject.tag.Equals("Floor"))
         {
             Instantiate(_shatteredObject, transform.position, transform.rotation);
 

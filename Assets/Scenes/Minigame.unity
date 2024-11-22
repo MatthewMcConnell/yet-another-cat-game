@@ -408,8 +408,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  jumpPower: 1
   gameInput: {fileID: 918033167}
-  rigidBody: {fileID: 465122873}
+  rigidBody: {fileID: 0}
 --- !u!4 &465122872
 Transform:
   m_ObjectHideFlags: 0

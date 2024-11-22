@@ -14,8 +14,14 @@ public class Cat : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpPower;
     [SerializeField] private float rotationSensitivity;
+    [SerializeField] private float attackRange;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private Rigidbody rigidBody;
+
+    private void Start()
+    {
+        gameInput.addAttackListener(OnAttack);
+    }
 
     private void Update()
     {
@@ -29,6 +35,20 @@ public class Cat : MonoBehaviour
     {
         Vector3 moveDirection = gameInput.GetMovementVectorNormalized();
         tryJump(moveDirection);
+    }
+
+    private void OnAttack(object sender, EventArgs e)
+    {
+        Debug.Log("Cat Attacked!");
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, attackRange))
+        {
+            Debug.Log("CAT HIT SOMETHING!");   
+            if (raycastHit.transform.TryGetComponent(out Monster monster))
+            {
+                Debug.Log("WAS A MONSTER!");
+                monster.OnAttack();
+            }
+        }
     }
     
     private void ensureZRotationIsZero()

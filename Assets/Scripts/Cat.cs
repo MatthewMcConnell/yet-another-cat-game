@@ -5,12 +5,15 @@ using System.Numerics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
 public class Cat : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float jumpPower; 
+    [SerializeField] private float jumpPower;
+    [SerializeField] private float rotationSensitivity;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private Rigidbody rigidBody;
 
@@ -27,15 +30,13 @@ public class Cat : MonoBehaviour
         tryJump(moveDirection);
     }
     
-    private void rotate(float pan)
+    private void rotate(Vector2 pan)
     {
-        Vector3 rotation = new Vector3(0, pan, 0);
-        transform.Rotate(rotation);
+        transform.Rotate(Vector3.up, pan.x * rotationSensitivity, Space.Self);
     }
 
     private void moveForwardOrBack(Vector3 moveDirection)
     {
-        // Vector3 fbMoveDirection = new Vector3(0, 0, moveDirection.z);
         Vector3 fbMoveDirection = transform.forward * moveDirection.z;
         transform.position += fbMoveDirection * (moveSpeed * Time.deltaTime);
     }

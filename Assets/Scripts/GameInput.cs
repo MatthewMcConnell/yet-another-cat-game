@@ -19,9 +19,9 @@ public class GameInput : MonoBehaviour
         return playerInputActions.Player.Move.ReadValue<Vector3>();
     }
 
-    public float GetMousePan()
+    public Vector2 GetMousePan()
     {
         Vector2 mouseDelta = playerInputActions.Player.Look.ReadValue<Vector2>();
-        return mouseDelta.x;
+        return mouseDelta;
     }
 }

@@ -1860,6 +1860,37 @@ Transform:
   - {fileID: 1981462863}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &228276066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 228276067}
+  m_Layer: 0
+  m_Name: Wall_colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &228276067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228276066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1893716762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &235398433
 Transform:
   m_ObjectHideFlags: 0
@@ -1981,113 +2012,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2014058740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &251785172
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254948310}
-  m_Mesh: {fileID: 4300000, guid: 1ae81928219d4a443b7172bffd15591a, type: 3}
---- !u!23 &252751124
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254948310}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: c0c473242512cdf468d23f8d6472b2e9, type: 2}
-  - {fileID: 2100000, guid: 7ddcf91acb54342419dd991d9086774e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &254948310
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 255176694}
-  - component: {fileID: 251785172}
-  - component: {fileID: 252751124}
-  - component: {fileID: 255176695}
-  m_Layer: 0
-  m_Name: Dressing_mirror
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &255176694
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254948310}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07163954, y: -0.756, z: 2.9392014}
-  m_LocalScale: {x: 0.0328084, y: 0.0328084, z: 0.0328084}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1284045798}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &255176695
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254948310}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1ae81928219d4a443b7172bffd15591a, type: 3}
 --- !u!4 &341329024
 Transform:
   m_ObjectHideFlags: 0
@@ -9390,7 +9314,6 @@ Transform:
   - {fileID: 1722056217}
   - {fileID: 1532481326668475714}
   - {fileID: 518522900}
-  - {fileID: 255176694}
   - {fileID: 565440566}
   - {fileID: 229733332587674128}
   - {fileID: 5213575273634815115}
@@ -24900,6 +24823,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 543450652240269365}
+  - {fileID: 228276067}
   m_Father: {fileID: 1654331683}
   m_LocalEulerAnglesHint: {x: 0, y: 60.000004, z: 0}
 --- !u!4 &1895379877
@@ -32190,6 +32114,7 @@ GameObject:
   - component: {fileID: 4390683675542476}
   - component: {fileID: 33209941254689456}
   - component: {fileID: 23053569584142068}
+  - component: {fileID: 33209941254689457}
   m_Layer: 0
   m_Name: Dish-drainer
   m_TagString: Untagged
@@ -33381,6 +33306,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668059125482888}
+  m_Mesh: {fileID: 4300000, guid: a694e5896203f12408a5a1439250a15e, type: 3}
+--- !u!64 &33209941254689457
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668059125482888}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: a694e5896203f12408a5a1439250a15e, type: 3}
 --- !u!33 &33234954788990065
 MeshFilter:
@@ -34694,6 +34641,7 @@ GameObject:
   - component: {fileID: 8218269398234511882}
   - component: {fileID: 7752760745049535636}
   - component: {fileID: 6367208982005309027}
+  - component: {fileID: 8218269398234511883}
   m_Layer: 0
   m_Name: Bed_room_ceiling
   m_TagString: Untagged
@@ -37963,6 +37911,7 @@ GameObject:
   - component: {fileID: 1472634276977166377}
   - component: {fileID: 6982960394878259232}
   - component: {fileID: 2998210413741139495}
+  - component: {fileID: 6982960394878259233}
   m_Layer: 0
   m_Name: Lving_room_ceiling
   m_TagString: Untagged
@@ -39918,6 +39867,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3968566922796125159}
   m_Mesh: {fileID: 337213060598088469, guid: c9f1d8cd7c2566f4a9066656d0bc9fb2, type: 3}
+--- !u!65 &6982960394878259233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968566922796125159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 841.69385, y: 0, z: 652.4129}
+  m_Center: {x: 2.3928835, y: 0, z: 0.236496}
 --- !u!1 &7015935350055055623
 GameObject:
   m_ObjectHideFlags: 0
@@ -40915,6 +40885,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8101829309903553773}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8218269398234511883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246304293288003390}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 362.73157, y: 0.0076293945, z: 426.0702}
+  m_Center: {x: -0.41810614, y: 0.0038146973, z: -0.00012969972}
 --- !u!4 &8233508218359266782
 Transform:
   m_ObjectHideFlags: 0
@@ -41303,6 +41294,7 @@ GameObject:
   - component: {fileID: 4714544072492423201}
   - component: {fileID: 3498413457370664100}
   - component: {fileID: 6785300343667727688}
+  - component: {fileID: 8826015933761878568}
   m_Layer: 0
   m_Name: Study_room_ceiling
   m_TagString: Untagged
@@ -41310,6 +41302,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
+--- !u!65 &8826015933761878568
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8826015933761878567}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 269.27072, y: 0, z: 200.75446}
+  m_Center: {x: -0.7075806, y: 0, z: 0.47172552}
 --- !u!1 &8843973696717706009
 GameObject:
   m_ObjectHideFlags: 0

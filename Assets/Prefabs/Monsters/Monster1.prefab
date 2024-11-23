@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7556519365939828211}
   - component: {fileID: 3635558954797957987}
   - component: {fileID: 338387911205380228}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Monster1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,6 +84,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: monster_model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2750664189677430275, guid: 9c68bf67782cd754984bb427bc288679,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3271726785580776633, guid: 9c68bf67782cd754984bb427bc288679,
         type: 3}

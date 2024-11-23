@@ -1669,6 +1669,7 @@ GameObject:
   - component: {fileID: 4851109533357343839}
   - component: {fileID: 522866266013363938}
   - component: {fileID: 1519020476281831314}
+  - component: {fileID: 4093527893420398364}
   m_Layer: 0
   m_Name: Cat_4
   m_TagString: Untagged
@@ -1889,6 +1890,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4093527893420398364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559479956018839600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec93716b3b46d579b6e4fdb99ace7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 2
+  gameInput: {fileID: 0}
 --- !u!1 &5866195252194834816
 GameObject:
   m_ObjectHideFlags: 0

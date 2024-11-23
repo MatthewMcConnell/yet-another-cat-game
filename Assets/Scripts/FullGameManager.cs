@@ -26,6 +26,7 @@ public class FullGameManager : MonoBehaviour
     private void Start()
     {
         gameInput.AddEnterPressedListener(OnEnterPressed);
+        fireStateChangeEvent();
     }
 
     private void OnEnterPressed(object sender, EventArgs e)

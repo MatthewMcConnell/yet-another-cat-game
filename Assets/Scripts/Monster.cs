@@ -23,6 +23,7 @@ public class Monster : MonoBehaviour
 
     public void Spawn()
     {
+        Debug.Log("I have spawned");
         gameObject.SetActive(true);
     }
 }

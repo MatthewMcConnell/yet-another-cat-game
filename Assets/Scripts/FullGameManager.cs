@@ -5,24 +5,28 @@ using UnityEngine;
 
 public class FullGameManager : MonoBehaviour
 {
+
     [SerializeField] private GameInput gameInput;
     [SerializeField] private float countdownDurationInSeconds;
     [SerializeField] private float gameDurationInSeconds;
+    [SerializeField] private float delayToFinishInSeconds;
     [SerializeField] private List<Monster> monsters;
 
     public static FullGameManager Instance { get; private set; }
     public GameState gameState { get; private set; }
     public bool hasPlayerWon { get; private set; }
     public event EventHandler OnStateChange;
-    
+
     private float countdownTimer;
     private float gameTimer;
+    private float delayToFinishTimer;
     private int monstersAlive;
 
     private void Awake()
     {
         Instance = this;
         gameState = GameState.PREGAME;
+        hasPlayerWon = false;
     }
 
     private void Start()
@@ -62,17 +66,28 @@ public class FullGameManager : MonoBehaviour
 
     private void processRunning()
     {
-        gameTimer -= Time.deltaTime;
-        if (gameTimer <= 0)
+        if (!hasPlayerWon)
         {
-            hasPlayerWon = false;
-            goToFinished();
+            gameTimer -= Time.deltaTime;
+            if (gameTimer <= 0)
+            {
+                hasPlayerWon = false;
+                goToFinished();
+            }
+
+            if (AllMonstersAreDead())
+            {
+                hasPlayerWon = true;
+                delayToFinishTimer = delayToFinishInSeconds;
+            }
         }
-        
-        if (AllMonstersAreDead())
+        else
         {
-            hasPlayerWon = true;
-            goToFinished();
+            delayToFinishTimer -= Time.deltaTime;
+            if (delayToFinishTimer <= 0)
+            {
+                goToFinished();
+            }
         }
     }
 
@@ -102,6 +117,8 @@ public class FullGameManager : MonoBehaviour
         {
             monster.Spawn();
         }
+
+        hasPlayerWon = false;
         monstersAlive = monsters.Count;
         gameTimer = gameDurationInSeconds;
         gameState = GameState.RUNNING;
@@ -110,17 +127,17 @@ public class FullGameManager : MonoBehaviour
 
     private void goToIntro()
     {
-        gameState = GameState.INTRO;    
+        gameState = GameState.INTRO;
         fireStateChangeEvent();
     }
-    
+
     private void goToCountdown()
     {
         countdownTimer = countdownDurationInSeconds;
         gameState = GameState.COUNTDOWN;
         fireStateChangeEvent();
     }
-    
+
     private void goToPregame()
     {
         gameState = GameState.PREGAME;
@@ -132,22 +149,22 @@ public class FullGameManager : MonoBehaviour
         Debug.Log("Game State is now: " + gameState);
         OnStateChange?.Invoke(this, EventArgs.Empty);
     }
-    
+
     public int GetCountdownTime()
     {
         return Mathf.CeilToInt(countdownTimer);
     }
-    
+
     public float GetGameTime()
     {
         return 1 - gameTimer / gameDurationInSeconds;
     }
-    
+
     public void OnMonsterDied()
     {
         monstersAlive--;
     }
-    
+
     public int GetMonstersLeft()
     {
         return monstersAlive;

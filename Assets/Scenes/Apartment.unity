@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 221606711}
   m_Layer: 0
   m_Name: Painting_Small_C
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4064,7 +4064,7 @@ GameObject:
   - component: {fileID: 372182685}
   m_Layer: 0
   m_Name: Towel Holder
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5154,7 +5154,7 @@ GameObject:
   - component: {fileID: 549197835}
   m_Layer: 0
   m_Name: Notepad
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7230,7 +7230,7 @@ GameObject:
   - component: {fileID: 967220533}
   m_Layer: 0
   m_Name: Kettle
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7757,7 +7757,7 @@ GameObject:
   - component: {fileID: 1060261633}
   m_Layer: 0
   m_Name: Painting_Photo_B
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8119,7 +8119,7 @@ GameObject:
   - component: {fileID: 1086065080}
   m_Layer: 0
   m_Name: CoffeeMachine
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9765,6 +9765,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &1177324609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5167214323208844942, guid: ef4b034a3d37c7f44b6f0cff58aa3a73,
+    type: 3}
+  m_PrefabInstance: {fileID: 1472404502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1177324615
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177324609}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6929667586131138914, guid: 89db3cbb0b0ce404caf6bcdcfe4fc625, type: 3}
 --- !u!1 &1179066884
 GameObject:
   m_ObjectHideFlags: 0
@@ -10365,7 +10393,7 @@ GameObject:
   - component: {fileID: 1286712164}
   m_Layer: 0
   m_Name: Painting_StandPhoto_A
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10692,7 +10720,7 @@ GameObject:
   - component: {fileID: 1316466020}
   m_Layer: 0
   m_Name: mug-tree
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23411,10 +23439,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat_4
       objectReference: {fileID: 0}
+    - target: {fileID: 7193641240201059899, guid: ef4b034a3d37c7f44b6f0cff58aa3a73,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7193641240201059899, guid: ef4b034a3d37c7f44b6f0cff58aa3a73,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325631387132911539, guid: ef4b034a3d37c7f44b6f0cff58aa3a73,
+        type: 3}
+      propertyPath: _collider
+      value: 
+      objectReference: {fileID: 1177324615}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5167214323208844942, guid: ef4b034a3d37c7f44b6f0cff58aa3a73,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1177324615}
   m_SourcePrefab: {fileID: 100100000, guid: ef4b034a3d37c7f44b6f0cff58aa3a73, type: 3}
 --- !u!1 &1473855062
 GameObject:
@@ -23431,7 +23478,7 @@ GameObject:
   - component: {fileID: 1476108439}
   m_Layer: 0
   m_Name: Painting_StandPhoto_C
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26231,7 +26278,7 @@ GameObject:
   - component: {fileID: 1756375824}
   m_Layer: 0
   m_Name: chopping-board
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31242,7 +31289,7 @@ GameObject:
   - component: {fileID: 2042393505}
   m_Layer: 0
   m_Name: knife-block
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34946,7 +34993,7 @@ GameObject:
   - component: {fileID: 33818888555662287}
   m_Layer: 0
   m_Name: Laptop
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34966,7 +35013,7 @@ GameObject:
   - component: {fileID: 33569824727026102}
   m_Layer: 0
   m_Name: RemoteControl
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35004,7 +35051,7 @@ GameObject:
   - component: {fileID: 33090571421984844}
   m_Layer: 0
   m_Name: Magazine-2
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35140,7 +35187,7 @@ GameObject:
   - component: {fileID: 33209941254689458}
   m_Layer: 0
   m_Name: Dish-drainer
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35160,7 +35207,7 @@ GameObject:
   - component: {fileID: 33234954788990066}
   m_Layer: 0
   m_Name: Toaster
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35180,7 +35227,7 @@ GameObject:
   - component: {fileID: 33769767361937777}
   m_Layer: 0
   m_Name: StudyRoom Table Lamp
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37059,7 +37106,7 @@ GameObject:
   - component: {fileID: 247020458035196256}
   m_Layer: 0
   m_Name: VaseFloor_1
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43127,7 +43174,7 @@ GameObject:
   - component: {fileID: 5425552720187535498}
   m_Layer: 0
   m_Name: Magazine
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44053,7 +44100,7 @@ GameObject:
   - component: {fileID: 7217272892436753032}
   m_Layer: 0
   m_Name: Towel Holder
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44331,7 +44378,7 @@ GameObject:
   - component: {fileID: 7457348506427653744}
   m_Layer: 0
   m_Name: Magazine
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

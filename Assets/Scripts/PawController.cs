@@ -12,6 +12,14 @@ public class PawController : MonoBehaviour
     private AudioClip _attackClip;
     private bool _canAttack = true;
 
+    [SerializeField]
+    private MeshCollider _collider;
+
+    private void Start()
+    {
+        _collider.enabled = false;
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -27,6 +35,7 @@ public class PawController : MonoBehaviour
     void PawAttack()
     {
         _canAttack = false;
+        _collider.enabled = true;
         Animator animator = _paw.GetComponent<Animator>();
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(_attackClip);
@@ -38,5 +47,6 @@ public class PawController : MonoBehaviour
     {
         yield return new WaitForSeconds(_cooldown);
         _canAttack = true;
+        _collider.enabled = false;
     }
 }

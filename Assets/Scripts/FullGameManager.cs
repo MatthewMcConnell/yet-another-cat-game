@@ -146,7 +146,6 @@ public class FullGameManager : MonoBehaviour
 
     private void fireStateChangeEvent()
     {
-        Debug.Log("Game State is now: " + gameState);
         OnStateChange?.Invoke(this, EventArgs.Empty);
     }
 

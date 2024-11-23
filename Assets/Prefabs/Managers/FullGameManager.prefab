@@ -47,3 +47,5 @@ MonoBehaviour:
   gameInput: {fileID: 0}
   countdownDurationInSeconds: 3
   gameDurationInSeconds: 10
+  monsters:
+  - {fileID: 3635558954797957987, guid: 433c9414a7f8826b0b733c3cb794741d, type: 3}

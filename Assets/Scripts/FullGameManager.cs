@@ -8,6 +8,7 @@ public class FullGameManager : MonoBehaviour
     [SerializeField] private GameInput gameInput;
     [SerializeField] private float countdownDurationInSeconds;
     [SerializeField] private float gameDurationInSeconds;
+    [SerializeField] private List<Monster> monsters;
 
     public static FullGameManager Instance { get; private set; }
     public GameState gameState { get; private set; }
@@ -16,6 +17,7 @@ public class FullGameManager : MonoBehaviour
     
     private float countdownTimer;
     private float gameTimer;
+    private int monstersAlive;
 
     private void Awake()
     {
@@ -76,7 +78,7 @@ public class FullGameManager : MonoBehaviour
 
     private bool AllMonstersAreDead()
     {
-        return false;
+        return monstersAlive == 0;
     }
 
     private void goToFinished()
@@ -96,6 +98,11 @@ public class FullGameManager : MonoBehaviour
 
     private void goToRunning()
     {
+        foreach (var monster in monsters)
+        {
+            monster.Spawn();
+        }
+        monstersAlive = monsters.Count;
         gameTimer = gameDurationInSeconds;
         gameState = GameState.RUNNING;
         fireStateChangeEvent();
@@ -134,5 +141,15 @@ public class FullGameManager : MonoBehaviour
     public float GetGameTime()
     {
         return 1 - gameTimer / gameDurationInSeconds;
+    }
+    
+    public void OnMonsterDied()
+    {
+        monstersAlive--;
+    }
+    
+    public int GetMonstersLeft()
+    {
+        return monstersAlive;
     }
 }

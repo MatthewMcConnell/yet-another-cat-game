@@ -9,14 +9,20 @@ public class Monster : MonoBehaviour
 
     public void OnAttack()
     {
-        Vector3 breakableObjectPosition = getBreakableObjectPosition();
-        Destroy(gameObject);
+        Vector3 breakableObjectPosition = GetBreakableObjectPosition();
+        gameObject.SetActive(false);
         Instantiate(breakableObject, breakableObjectPosition, transform.rotation);
+        FullGameManager.Instance.OnMonsterDied();
     }
 
-    private Vector3 getBreakableObjectPosition()
+    private Vector3 GetBreakableObjectPosition()
     {
         return new Vector3(transform.position.x, transform.position.y + breakableObjectFallHeight,
             transform.position.z);
+    }
+
+    public void Spawn()
+    {
+        gameObject.SetActive(true);
     }
 }

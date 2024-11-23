@@ -129,4 +129,9 @@ public class FullGameManager : MonoBehaviour
     {
         return Mathf.CeilToInt(countdownTimer);
     }
+    
+    public float GetGameTime()
+    {
+        return 1 - gameTimer / gameDurationInSeconds;
+    }
 }

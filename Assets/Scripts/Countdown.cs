@@ -23,6 +23,7 @@ public class Countdown : MonoBehaviour
     
     private void OnStateChange(object sender, System.EventArgs e)
     {
+        Debug.Log("Countdown statechange");
         switch (FullGameManager.Instance.gameState)
         {
             case GameState.COUNTDOWN:

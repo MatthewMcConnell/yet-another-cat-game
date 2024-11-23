@@ -894,6 +894,11 @@ PrefabInstance:
       propertyPath: gameInput
       value: 
       objectReference: {fileID: 1563994530}
+    - target: {fileID: 6817466301471320565, guid: b04f5e72f414e36bd85b8746c9c78d3f,
+        type: 3}
+      propertyPath: monsters.Array.data[0]
+      value: 
+      objectReference: {fileID: 2024930103}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -967,6 +972,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2024930103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3635558954797957987, guid: 433c9414a7f8826b0b733c3cb794741d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1381843136}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179fe58342dd71c918272800297a1cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4774055519340046925
 PrefabInstance:
   m_ObjectHideFlags: 0

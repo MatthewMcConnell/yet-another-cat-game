@@ -413,6 +413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6303424628546423998}
   - component: {fileID: 156638196693546618}
+  - component: {fileID: 7737338097210031526}
   m_Layer: 0
   m_Name: ShatteredVase
   m_TagString: Untagged
@@ -556,6 +557,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7737338097210031526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805776156923885763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b11781f8053dc7c5bb26ae58b7f001b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &863763734592640827
 GameObject:
   m_ObjectHideFlags: 0

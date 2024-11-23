@@ -10,6 +10,7 @@ public class Monster : MonoBehaviour
     public void OnAttack()
     {
         Vector3 breakableObjectPosition = GetBreakableObjectPosition();
+        gameObject.GetComponent<AudioSource>().Play();
         gameObject.SetActive(false);
         Instantiate(breakableObject, breakableObjectPosition, transform.rotation);
         FullGameManager.Instance.OnMonsterDied();

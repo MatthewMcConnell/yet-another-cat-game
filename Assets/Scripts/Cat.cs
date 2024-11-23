@@ -51,7 +51,7 @@ public class Cat : MonoBehaviour
         {
             if (raycastHit.transform.TryGetComponent(out Monster monster))
             {
-                gameObject.GetComponent<AudioSource>().Play();
+                //gameObject.GetComponent<AudioSource>().Play();
                 monster.OnAttack();
             }
         }

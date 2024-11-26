@@ -10,6 +10,7 @@ public class Clock : MonoBehaviour
     
     private void Start()
     {
+        gameObject.SetActive(false);
         FullGameManager.Instance.OnStateChange += OnStateChange;
     }
     

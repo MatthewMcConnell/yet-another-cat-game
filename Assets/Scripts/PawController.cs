@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class PawController : MonoBehaviour
     private float _cooldown = 1.0f;
     [SerializeField]
     private AudioClip _attackClip;
-    private bool _canAttack = true;
+    private bool _canAttack;
 
     [SerializeField]
     private MeshCollider _collider;
@@ -18,6 +19,21 @@ public class PawController : MonoBehaviour
     private void Start()
     {
         _collider.enabled = false;
+        _canAttack = false;
+        FullGameManager.Instance.OnStateChange += OnStateChange;
+    }
+    
+    private void OnStateChange(object sender, EventArgs e)
+    {
+        switch (FullGameManager.Instance.gameState)
+        {
+            case GameState.RUNNING:
+                _canAttack = true;
+                break;
+            case GameState.FINISHED:
+                _canAttack = false;
+                break;
+        }
     }
 
     void Update()

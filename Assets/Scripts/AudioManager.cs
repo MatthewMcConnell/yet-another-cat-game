@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     
     private void Start()
     {
+        introOutroBackground.Play();
         FullGameManager.Instance.OnStateChange += OnStateChange;
     }
 

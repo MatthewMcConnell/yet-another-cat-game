@@ -11,6 +11,7 @@ public class Intro : MonoBehaviour
     
     private void Start()
     {
+        gameObject.SetActive(false);
         FullGameManager.Instance.OnStateChange += OnStateChange;
     }
     

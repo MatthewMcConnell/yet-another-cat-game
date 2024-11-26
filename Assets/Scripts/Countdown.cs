@@ -10,6 +10,7 @@ public class Countdown : MonoBehaviour
     
     private void Start()
     {
+        gameObject.SetActive(false);
         FullGameManager.Instance.OnStateChange += OnStateChange;
     }
     

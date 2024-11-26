@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179fe58342dd71c918272800297a1cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakableObjectFallHeight: 1
+  breakableObjectFallHeight: 0.15
   breakableObject: {fileID: 5917443501201140776, guid: 6eb09e73bdd82e14694be6aeb10ccca7,
     type: 3}
 --- !u!136 &338387911205380228

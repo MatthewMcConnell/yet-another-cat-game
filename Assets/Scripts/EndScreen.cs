@@ -11,6 +11,7 @@ public class EndScreen : MonoBehaviour
     
     private void Start()
     {
+        gameObject.SetActive(false);
         FullGameManager.Instance.OnStateChange += OnStateChange;
     }
     

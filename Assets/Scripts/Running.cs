@@ -13,6 +13,7 @@ public class Running : MonoBehaviour
     
     private void Start()
     {
+        gameObject.SetActive(false);
         FullGameManager.Instance.OnStateChange += OnStateChange;
     }
 

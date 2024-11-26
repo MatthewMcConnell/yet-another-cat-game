@@ -11,6 +11,7 @@ public class PreGame : MonoBehaviour
     
     private void Start()
     {
+        gameObject.SetActive(true);
         FullGameManager.Instance.OnStateChange += OnStateChange;
     }
     

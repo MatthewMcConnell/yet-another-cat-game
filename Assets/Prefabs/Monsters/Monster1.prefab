@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakableObjectFallHeight: 0.15
-  breakableObject: {fileID: 5917443501201140776, guid: 6eb09e73bdd82e14694be6aeb10ccca7,
+  breakableObject: {fileID: 5917443501201140776, guid: 3a47dc22f70542586af00625e530c00c,
     type: 3}
 --- !u!136 &338387911205380228
 CapsuleCollider:

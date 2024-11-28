@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ANIA/menu.unity
-    guid: 79413c5eb69669c42bd73920b512aa85
-  - enabled: 1
-    path: Assets/Scenes/Minigame.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Apartment.unity
+    guid: c5f94bce797d88f4c81c9eeb92e56dfa
   m_configObjects: {}
